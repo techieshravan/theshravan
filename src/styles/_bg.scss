@@ -1,0 +1,52 @@
+$bgHeight: 500px;
+
+section.bg {
+  height: $bgHeight;
+  background: url("../images/bg.jpg") no-repeat fixed center center;
+  background-size: cover;
+
+  .overlay, .container {
+    height: $bgHeight;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+  }
+
+  .overlay {
+    //background: rgba(0, 0, 0, .8);
+    z-index: 5000;
+    //opacity: .9;
+    //transition: opacity .5s;
+  }
+
+  .container {
+
+    text-align: center;
+
+    .row {
+      width: 100%;
+      padding-left: 1em;
+      padding-right: 1em;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+
+      h1 {
+        color: $primaryColor;
+        font-size: 1.9em;
+        line-height: 2.4em;
+      }
+
+      .content {
+        color:#ffffff;
+        font-size: 1.3em;
+        line-height: 1.5em;
+      }
+    }
+  }
+}

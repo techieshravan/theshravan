@@ -1,0 +1,11 @@
+section.about {
+  height: auto;
+  padding: 30px $headerPadding;
+  background-color: #ffffff;
+
+  .content {
+    font-size: 1em;
+    line-height: 1.9em;
+    text-align: justify;
+  }
+}

@@ -1,0 +1,12 @@
+section.main {
+  position: absolute;
+  top: $headerHeight;
+  left: 0;
+  min-height: 600px;
+  height: auto;
+
+  @import 'bg';
+  @import 'about';
+  @import 'speaking';
+  @import 'magazines';
+}

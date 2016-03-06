@@ -1,0 +1,51 @@
+$primaryColor: #00a7e1;
+$secondaryColor: #2196F3;
+$desktopWidth: 75%;
+$headerPadding: 20px;
+$headerHeight: 50px;
+
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  color: #333333;
+  background-color: #ffffff;
+  font-family: 'Open Sans', HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.6em;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: #333333 none 0;
+  word-wrap: break-word;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+section {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: montserrat,'open sans',"Arial Black",serif;
+  font-weight: 400;
+  color: #2b2b2b;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
