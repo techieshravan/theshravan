@@ -1,11 +1,11 @@
 section.main {
-  position: absolute;
-  top: $headerHeight;
-  left: 0;
   min-height: 600px;
   height: auto;
+  padding: 0;
+  border: none;
+  margin: 0;
+  outline: none;
 
-  @import 'bg';
   @import 'about';
   @import 'speaking';
   @import 'magazines';

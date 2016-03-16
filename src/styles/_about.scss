@@ -1,7 +1,10 @@
 section.about {
-  height: auto;
-  padding: 30px $headerPadding;
-  background-color: #ffffff;
+
+  h2 {
+    font-size: 1.5em;
+    line-height: 2em;
+    padding-bottom: 0.5em;
+  }
 
   .content {
     font-size: 1em;

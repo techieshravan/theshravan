@@ -1,86 +1,122 @@
 section.speaking {
-  padding: 30px $headerPadding;
-  background: #e9e9e9;
+  //background: #e9e9e9;
+  background-color: #f9f9fa;
 
   h2 {
     font-size: 1.5em;
     line-height: 2em;
+  }
+
+  .content {
+    font-size: 1em;
+    line-height: 1.9em;
+    padding: 15px 0;
     text-align: justify;
   }
 
   h3 {
     font-size: 1.1em;
     line-height:1.6em;
-  }
-
-  //@media all and (#{"min-width: 751px"}) {
-  //
-  //  padding-top: 0;
-  //  padding-right: 0;
-  //  padding-left: 0;
-  //
-  //  h2 {
-  //     width: $desktopWidth;
-  //     margin-left: auto;
-  //     margin-right: auto;
-  //   }
-  //}
-
-  .content {
-    font-size: 1em;
-    line-height: 1.9em;
-    padding: 15px 0;
-    //color: #adadad;
-    //color: #00a7e1;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+    text-align: center;
   }
 
   .talks {
     width: 100%;
     height: auto;
+    margin: 0 auto;
     overflow: hidden;
 
-    //@media all and (#{"min-width: 751px"}) {
-    //  width: $desktopWidth;
-    //  margin-left: auto;
-    //  margin-right: auto;
-    //}
+    .talk {
+      float: left;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      margin-bottom: 30px;
+      background: #FFFFFF;
 
-    .card {
-      background: #ffffff;
-      height: 400px;
-      width: 300px;
-      margin: 30px auto;
+      @media all and (#{"min-width: 751px"}) {
+        width: 47%;
 
-      &:hover {
-        box-shadow:0 5px 10px rgba(0,0,0,.15);
-      }
-
-      .card-image {
-        height: 170px;
-        border-bottom: 1px solid #dadada;
-      }
-
-      .card-content {
-        height: 190px;
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-
-      .card-link {
-        text-transform: uppercase;
-        height: 30px;
-        padding-left: 20px;
-        padding-right: 20px;
-
-        a, a:hover {
-          text-decoration: none;
-          color: #448aff;
-          letter-spacing: .5px;
-
-          font-size: 14px;
-          font-weight: 300;
+        &:nth-child(2n) {
+          margin-left: 6%;
         }
       }
+
+      @media all and (#{"min-width: 992px"}) {
+
+        width: 30%;
+
+        &:nth-child(2n) {
+          margin-left: 0;
+        }
+
+        &:nth-child(3n-1) {
+          margin-left: 3.3%;
+          margin-right: 3.3%;
+        }
+      }
+
+      &:nth-child(odd) {
+        border: 1px solid #d0d5d8;
+        border-top: 3px solid #3498DB;
+      }
+
+      &:nth-child(odd) :hover {
+        background-color: #3498DB;
+      }
+
+      &:nth-child(even) {
+        border: 1px solid #d0d5d8;
+        border-top: 3px solid #2ECC71;
+      }
+
+      &:nth-child(even) :hover {
+        background-color: #2ECC71;
+      }
+
+      a {
+
+        display: block;
+        padding: 45px;
+
+        &:hover span.date, &:hover h4 {
+            color: #ffffff;
+        }
+
+        &:hover span.presentation {
+          color: #ffffff;
+          border-bottom: solid 1px #ffffff;
+        }
+
+        span.date {
+          font-size: 11px;
+          color: #8a959e;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+
+        h4 {
+          font-size: 24px;
+          line-height: 35px;
+          color: #323a45;
+          margin: 0;
+          height: 203px;
+          text-transform: none;
+        }
+
+        span.presentation {
+          display: inline-block;
+          font-weight: 400;
+          color: #8a959e;
+          font-size: 15px;
+          border-bottom: solid 1px #8a959e;
+        }
+
+      }
+
     }
   }
 }

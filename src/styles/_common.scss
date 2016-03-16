@@ -1,8 +1,11 @@
-$primaryColor: #00a7e1;
+//$primaryColor: #00a7e1;
 $secondaryColor: #2196F3;
-$desktopWidth: 75%;
-$headerPadding: 20px;
-$headerHeight: 50px;
+$primaryColor: #3498DB;
+
+$headerHeight: 500px;
+$navWrapperHeight: 5.625em;
+$navPadding: 5%;
+$navMobilePadding: 1em;
 
 *, :after, :before {
   -webkit-box-sizing: border-box;
@@ -34,6 +37,15 @@ body {
 
 section {
   width: 100%;
+  height: auto;
+  padding: $navMobilePadding;
+  background-color: #ffffff;
+  overflow: hidden;
+  border-bottom: 1px solid #cfd5e1;
+
+  @media all and (#{"min-width: 751px"}) {
+    padding: 3em $navPadding;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -48,4 +60,16 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
   clear: both;
   height: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.vertical-center {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
