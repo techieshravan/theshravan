@@ -5,7 +5,7 @@ $(document).ready(function($) {
   var headerHeight = 123;
 
   $('.navbar-toggle').click(function() {
-    $('nav').slideToggle("fast");
+    $('.primary-menu').slideToggle("fast");
   });
 
   //$(document).on('scroll', function() {
