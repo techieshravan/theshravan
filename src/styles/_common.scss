@@ -1,57 +1,27 @@
-//$primaryColor: #00a7e1;
-$secondaryColor: #2196F3;
 $primaryColor: #3498DB;
+$secondaryColor: #2196F3;
 
-$headerHeight: 500px;
-$navWrapperHeight: 5.625em;
-$navPadding: 5%;
-$navMobilePadding: 1em;
+$primary: #0080A6;
+$gray-dark: lighten(black, 25%);
+$gray: lighten(black, 50%);
+$white-faded: fade(white, 80%);
+$gray-light: #eee;
+
+@font-face {
+  font-family:segoe-ui_normal;
+  src:url('../fonts/segoe-ui.eot');
+  src:url('../fonts/segoe-ui.eot?#iefix') format("embedded-opentype"),
+      url('../fonts/segoe-ui.woff') format("woff"),
+      url('../fonts/segoe-ui.ttf') format("truetype"),
+      url('../fonts/segoe-ui.svg#web') format("svg");
+  font-weight:400;
+  font-style:normal;
+}
 
 *, :after, :before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  width: 100%;
-  color: #333333;
-  background-color: #ffffff;
-  font-family: 'Open Sans', HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-  font-size: 1em;
-  font-weight: 300;
-  line-height: 1.6em;
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: #333333 none 0;
-  word-wrap: break-word;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
-
-section {
-  width: 100%;
-  height: auto;
-  padding: $navMobilePadding;
-  background-color: #ffffff;
-  overflow: hidden;
-  border-bottom: 1px solid #cfd5e1;
-
-  @media all and (#{"min-width: 751px"}) {
-    padding: 3em $navPadding;
-  }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: montserrat,'open sans',"Arial Black",serif;
-  font-weight: 400;
-  color: #2b2b2b;
 }
 
 .clearfix:after {
@@ -62,8 +32,15 @@ h1, h2, h3, h4, h5, h6 {
   height: 0;
 }
 
-a {
-  text-decoration: none;
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: $gray-dark;
+  background-color: #ffffff;
 }
 
 .vertical-center {

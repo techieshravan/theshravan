@@ -1,252 +1,135 @@
-header {
-  position: relative;
+.navbar-custom {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: $headerHeight;
-  background: url("../images/bg.jpg") no-repeat fixed center center;
-  background-size: cover;
+  z-index: 3;
 
-  //-webkit-box-shadow: 0 0 4px #cdcdcd;
-  //-moz-box-shadow: 0 0 4px #cdcdcd;
-  //box-shadow: 0 0 4px #cdcdcd;
-  //z-index: 10000;
-
-  //-webkit-transition: all .5s;
-  //-moz-transition: all .5s;
-  //-o-transition: all .5s;
-  //transition: all .5s;
-
-  .overlay, .main-wrapper {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+  .nav {
+    li {
+      a {
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+    }
   }
 
-  .overlay {
-    background: #191d22;
-    opacity: 0.75;
+  @media only screen and (min-width: 768px) {
+    background: transparent;
+    border-bottom: 1px solid transparent;
+
+    .navbar-brand {
+      color: white;
+      padding: 20px;
+      &:hover,
+      &:focus {
+        color: $white-faded;
+      }
+    }
+
+    .nav {
+      li {
+        a {
+          color: white;
+          padding: 20px;
+          &:hover,
+          &:focus {
+            color: $white-faded;
+          }
+        }
+      }
+    }
   }
 
-  .main-wrapper {
-    z-index: 100;
+  @media only screen and (min-width: 1170px) {
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 
-    .nav-wrapper {
-      width: 100%;
-      height: 3.5em;
-
-      background: #fff;
+    &.is-fixed {
+      /* when the user scrolls down, we hide the header right above the viewport */
       position: fixed;
-      -webkit-box-shadow: 0 0 4px #cdcdcd;
-      -moz-box-shadow: 0 0 4px #cdcdcd;
-      box-shadow: 0 0 4px #cdcdcd;
+      top: -61px;
+      background-color: rgba(255,255,255, 0.9);
+      border-bottom: 1px solid darken(white, 5%);
+      -webkit-transition: -webkit-transform 0.3s;
+      -moz-transition: -moz-transform 0.3s;
+      transition: transform 0.3s;
 
-      @media all and (#{"min-width: 751px"}) {
-        height: $navWrapperHeight;
-        background: none;
-        position: static !important;
-        box-shadow: none;
+      .navbar-brand {
+        color: $gray-dark;
+        &:hover,
+        &:focus {
+          color: $primary;
+        }
       }
 
-      nav {
-        width: 100%;
-        height: 100%;
-        padding: 0 $navMobilePadding;
-
-        @media all and (#{"min-width: 751px"}) {
-          padding: 40px $navPadding 0;
-        }
-
-        .logo-wrapper {
-          height: 100%;
-          width: 40%;
-          float: left;
-
-          @media all and (#{"min-width: 751px"}) {
-            float: left;
-            width: 15%;
-          }
-
+      .nav {
+        li {
           a {
-            position: relative;
-            @extend .vertical-center;
-            display: inline-block;
-
-            height: 40px;
-            width: 40px;
-
-            background: url('../images/logo.png') no-repeat;
-            background-size: 40px;
-
-            @media all and (#{"min-width: 751px"}) {
-              //background: url('http://www.invisionapp.com/assets/img/sprites/global-sfcfa9f6e60.png') no-repeat 0 -591px;
-            }
-          }
-        }
-
-        button.navbar-toggle {
-          float: right;
-          outline: none;
-          width: 50px;
-          height: 50px;
-          border-radius: 0;
-          padding: 12px;
-          margin: 3px 0 0;
-          background-color: transparent;
-          border: none;
-          cursor: pointer;
-
-          @media all and (#{"min-width: 751px"}) {
-            display: none;
-          }
-
-          .nav-icon-bars {
-            position: relative;
-            top:0;
-            right: 0;
-            background: $primaryColor;
-            display: block;
-            height: 3px;
-            width: 100%;
-            margin-bottom: 5px;
-
-            -webkit-transition: all 300ms;
-            -moz-transition: all 300ms;
-            -ms-transition: all 300ms;
-            -o-transition: all 300ms;
-            transition: all 300ms;
-
-            @media all and (#{"min-width: 751px"}) {
-              background: #FFFFFF;
-            }
-
-            &:first-child {
-              margin-top: 5px;
-
-              -webkit-transform: rotate(0deg) translate(0,0);
-              -moz-transform: rotate(0deg) translate(0,0);
-              -ms-transform: rotate(0deg) translate(0,0);
-              -o-transform: rotate(0deg) translate(0,0);
-              transform: rotate(0deg) translate(0,0);
-
-              -webkit-transform-origin: center;
-              -moz-transform-origin: center;
-              -ms-transform-origin: center;
-              -o-transform-origin: center;
-              transform-origin: center;
-            }
-          }
-        }
-
-        ul {
-          display: none;
-          z-index: 100;
-          position: absolute;
-          top: 3.5em;
-          left: 0;
-          background: #ffffff;
-          width: 100%;
-          list-style-type: none;
-          padding: 0;
-          overflow: hidden;
-          margin-bottom: 20px;
-
-          @media all and (#{"min-width: 751px"}) {
-            display: block;
-            position: relative;
-            top:50%;
-            transform: translateY(-50%);
-            float: right;
-            visibility: visible;
-            width: 85%;
-            list-style-type: none;
-            text-align: right;
-            background: none;
-            margin-bottom: 0;
-          }
-
-          li {
-
-            border-top: 1px dotted #cdcdcd;
-
-            @media all and (#{"min-width: 751px"}) {
-              display: inline-block;
-              vertical-align: middle;
-              border: none;
-            }
-
-            a {
-
-              display: inline-block;
-              text-decoration: none;
-              width: 100%;
-              padding: 15px 20px;
-              margin: 0;
-              color: grey;
-              line-height: 30px;
-
-              @media all and (#{"min-width: 751px"}) {
-                font-family: montserrat,'open sans',"Arial Black",serif;
-                color: #ffffff;
-                padding: 5px 15px;
-                font-size: 13px;
-                line-height: 1em;
-                text-transform: uppercase;
-                display: block;
-
-                -webkit-transition: all 0.2s ease-in-out;
-                -moz-transition: all 0.2s ease-in-out;
-                transition: all 0.2s ease-in-out;
-                letter-spacing: 0.05em;
-              }
-
-              &:hover {
-                text-decoration: none;
-                //color: $primaryColor;
-                color: #ffffff;
-              }
+            color: $gray-dark;
+            &:hover,
+            &:focus {
+              color: $primary;
             }
           }
         }
       }
     }
 
-    .content-wrapper {
-      z-index: -100;
-      text-align: center;
-      width: 100%;
-      height: auto;
-      padding: $navMobilePadding;
-      position: relative;
-      @extend .vertical-center;
+    &.is-visible {
+      -webkit-transform: translate3d(0, 100%, 0);
+      -moz-transform: translate3d(0, 100%, 0);
+      -ms-transform: translate3d(0, 100%, 0);
+      -o-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+}
 
-      @media all and (#{"min-width: 751px"}) {
-        padding: $navPadding/2 $navPadding;
-      }
+header {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
-      .title {
-        color: #ffffff;
-        line-height: 1.5em;
-        font-size: 3em;
-        letter-spacing: 0.075em;
-        text-transform: uppercase;
+  background: $gray url('../images/bg.jpg') no-repeat scroll center center;
+  width: 100%;
+  height: 500px;
 
-        @media all and (#{"min-width: 751px"}) {
+  .site-heading {
+    position: relative;
+    top: 50%;
+    left: 0;
+    color: #ffffff;
+    text-align: center;
+    padding: 0 15px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 
-        }
-      }
+    h1 {
+      margin: 0 0 15px 0;
+      font-size: 2em;
+      font-weight: 300;
+      line-height: 150%;
+    }
 
-      .subtitle{
-        color: #ffffff;
-        font-style: italic;
-        line-height: 2em;
-        font-size: 1.2em;
-        letter-spacing: 0.005em;
-
-        @media all and (#{"min-width: 751px"}) {
-
-        }
-      }
+    h2 {
+      margin: 0;
+      font-size: 1.5em;
+      line-height: 150%;
+      font-weight: 200;
     }
   }
 }
