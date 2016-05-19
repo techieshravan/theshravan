@@ -35,40 +35,41 @@
   .navbar-header .navbar-brand {
     @extend .sans-serif-font;
     color: $theme-primary;
-    font-weight: 700;
     text-transform: uppercase;
 
     @media (min-width: 768px) {
-      color: rgba(white, 70%);
+      color: $theme-white;
     }
 
     &:hover, &:focus {
       color: darken($theme-primary, 10%);
 
       @media (min-width: 768px) {
-        color: white;
+        color: rgba(white, .7);
       }
     }
   }
 
   .nav {
+
     > li {
 
       > a, > a:focus {
         text-transform: uppercase;
-        font-weight: 700;
-        font-size: 13px;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 1px;
         color: $theme-dark;
 
         @media (min-width: 768px) {
-          color: rgba(white, 70%);
+          color: $theme-white;
         }
 
         &:hover {
           color: $theme-primary;
 
           @media (min-width: 768px) {
-            color: white;
+            color: rgba(white, 70%);
           }
         }
       }

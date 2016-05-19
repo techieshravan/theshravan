@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-  @extend .serif-font;
+  @extend .sans-serif-font;
 }
 
 hr {
@@ -50,11 +50,11 @@ p {
 }
 
 section {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 aside {
-  padding: 50px 0;
+  padding: 40px 0;
 }
 
 .no-padding {

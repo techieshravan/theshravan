@@ -80,7 +80,7 @@ gulp.src(paths.fonts, {dot: true})
 });
 
 gulp.task('watch', () =>  {
-    gulp.watch(paths.styles, ['sass']);
+    gulp.watch('src/scss/*.scss', ['sass']);
     gulp.watch(paths.scripts, ['scripts']);
     gulp.watch(paths.jade, ['jade']);
     gulp.watch(paths.images, ['copy:images']);
