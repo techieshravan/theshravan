@@ -1,0 +1,87 @@
+.navbar-default {
+
+  background-color: white;
+  border-color: rgba($theme-dark, 5%);
+  @extend .sans-serif-font;
+  @extend .transition-all;
+
+  @media (min-width: 768px) {
+    background-color: transparent;
+    border-color: rgba(white, 30%);
+
+    &.affix {
+      background-color: white;
+      border-color: rgba($theme-dark, 5%);
+
+      .navbar-header .navbar-brand {
+        color: $theme-primary;
+        font-size: 14px;
+
+        &:hover, &:focus {
+          color: darken($theme-primary, 10%);
+        }
+      }
+
+      .nav > li > a, .nav > li > a:focus {
+        color: $theme-dark;
+
+        &:hover {
+          color: $theme-primary;
+        }
+      }
+    }
+  }
+
+  .navbar-header .navbar-brand {
+    @extend .sans-serif-font;
+    color: $theme-primary;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media (min-width: 768px) {
+      color: rgba(white, 70%);
+    }
+
+    &:hover, &:focus {
+      color: darken($theme-primary, 10%);
+
+      @media (min-width: 768px) {
+        color: white;
+      }
+    }
+  }
+
+  .nav {
+    > li {
+
+      > a, > a:focus {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 13px;
+        color: $theme-dark;
+
+        @media (min-width: 768px) {
+          color: rgba(white, 70%);
+        }
+
+        &:hover {
+          color: $theme-primary;
+
+          @media (min-width: 768px) {
+            color: white;
+          }
+        }
+      }
+
+      &.active {
+        > a, > a:focus {
+          color: $theme-primary !important;
+          background-color: transparent;
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}

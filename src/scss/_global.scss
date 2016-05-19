@@ -1,0 +1,62 @@
+// Global Components
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  @extend .serif-font;
+}
+
+hr {
+  border: 3px $theme-primary;
+  max-width: 50px;
+}
+
+hr.light {
+  border-color: white;
+}
+
+a {
+  @extend .transition-all;
+  color: $theme-primary;
+
+  &:hover, &:focus {
+    color: darken($theme-primary, 10%);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend .sans-serif-font;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.bg-primary {
+  background-color: $theme-primary;
+}
+
+.bg-dark {
+  background-color: $theme-dark;
+  color: white;
+}
+
+.text-faded {
+  color: rgba(white, 70%);
+}
+
+section {
+  padding: 100px 0;
+}
+
+aside {
+  padding: 50px 0;
+}
+
+.no-padding {
+  padding: 0;
+}
