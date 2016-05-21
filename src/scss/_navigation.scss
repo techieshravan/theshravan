@@ -1,6 +1,5 @@
 .navbar-default {
-
-  background-color: white;
+  background-color: #ffffff;
   border-color: rgba($theme-dark, 5%);
   @extend .sans-serif-font;
   @extend .transition-all;
@@ -10,7 +9,7 @@
     border-color: rgba(white, 30%);
 
     &.affix {
-      background-color: white;
+      background-color: #ffffff;
       border-color: rgba($theme-dark, 5%);
 
       .navbar-header .navbar-brand {
@@ -78,6 +77,7 @@
         > a, > a:focus {
           color: $theme-primary !important;
           background-color: transparent;
+
           &:hover {
             background-color: transparent;
           }
