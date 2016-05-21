@@ -2,14 +2,14 @@
 
   .box {
     max-width: 400px;
-    margin: 50px auto 0;
+    margin: 30px auto 0;
+
+    @media (min-width: 992px) {
+      margin-top: 20px;
+    }
 
     h3, p {
       line-height: 150%;
-    }
-
-    @media (min-width: 992px) {
-      margin: 20px auto 0;
     }
 
     p {

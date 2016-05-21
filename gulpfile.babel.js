@@ -40,13 +40,13 @@ gulp.task('useref', () => {
 gulp.task('sass', () => {
     return gulp.src(paths.styles)
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('dist/css/'))
+        .pipe(gulp.dest('dist/assets/css/'))
         .pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('scripts', () => {
     return gulp.src(paths.scripts)
-        .pipe(gulp.dest('dist/js/'))
+        .pipe(gulp.dest('dist/assets/js/'))
         .pipe(browserSync.reload({ stream: true }));
 });
 
@@ -59,37 +59,37 @@ gulp.task('jade', () => {
 
 gulp.task('copy:images', () => {
     gulp.src(paths.images, {dot: true})
-        .pipe(gulp.dest('dist/img'))
+        .pipe(gulp.dest('dist/assets/img'))
         .pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('copy:fonts', () => {
     gulp.src(paths.fonts, {dot: true})
-        .pipe(gulp.dest('dist/fonts'))
+        .pipe(gulp.dest('dist/assets/fonts'))
         .pipe(browserSync.reload({ stream: true }));
 
     gulp.src('src/font-awesome/css/*.*')
-        .pipe(gulp.dest('dist/font-awesome/css'));
+        .pipe(gulp.dest('dist/assets/font-awesome/css'));
 
     gulp.src('src/font-awesome/fonts/*.*')
-        .pipe(gulp.dest('dist/font-awesome/fonts'));
+        .pipe(gulp.dest('dist/assets/font-awesome/fonts'));
 });
 
 gulp.task('copy:bootstrap', () => {
     gulp.src('bower_components/bootstrap/dist/css/*.css')
-        .pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest('dist/assets/css'));
 
     gulp.src('bower_components/bootstrap/dist/fonts/*.*')
-        .pipe(gulp.dest('dist/fonts'));
+        .pipe(gulp.dest('dist/assets/fonts'));
 
     gulp.src('bower_components/bootstrap/dist/js/*.js')
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('dist/assets/js'));
     
     gulp.src('bower_components/jquery/dist/*.js')
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('dist/assets/js'));
 
     gulp.src('src/css/animate.min.css')
-        .pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest('dist/assets/css'));
 });
 
 gulp.task('copy', ['copy:images', 'copy:fonts', 'copy:bootstrap']);
