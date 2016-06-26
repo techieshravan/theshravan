@@ -58,13 +58,13 @@ gulp.task('jade', () => {
 });
 
 gulp.task('copy:images', () => {
-    gulp.src(paths.images, {dot: true})
+    gulp.src(paths.images, { dot: true })
         .pipe(gulp.dest('dist/assets/img'))
         .pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('copy:fonts', () => {
-    gulp.src(paths.fonts, {dot: true})
+    gulp.src(paths.fonts, { dot: true })
         .pipe(gulp.dest('dist/assets/fonts'))
         .pipe(browserSync.reload({ stream: true }));
 
@@ -84,7 +84,7 @@ gulp.task('copy:bootstrap', () => {
 
     gulp.src('bower_components/bootstrap/dist/js/*.js')
         .pipe(gulp.dest('dist/assets/js'));
-    
+
     gulp.src('bower_components/jquery/dist/*.js')
         .pipe(gulp.dest('dist/assets/js'));
 
@@ -94,7 +94,7 @@ gulp.task('copy:bootstrap', () => {
 
 gulp.task('copy', ['copy:images', 'copy:fonts', 'copy:bootstrap']);
 
-gulp.task('watch', () =>  {
+gulp.task('watch', () => {
     gulp.watch('src/scss/*.scss', ['sass']);
     gulp.watch(paths.scripts, ['scripts']);
     gulp.watch(paths.jade, ['jade']);
